@@ -1,0 +1,24 @@
+<%- include("partials/header") %>
+<div class="add-form-container">
+    <div></div>
+    <div class="add-form">
+        <form action="/add" method="post">
+            <label for="tag">Category</label>
+            <input type="text" id="tag" name="tag" placeholder="Enter category(max 10 words)" required>
+
+            <label for="topic">Topic</label>
+            <input type="text" id="topic" name="topic" placeholder="Enter topic(max 10 words)" required>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Enter short description"></textarea>
+            
+            <label for="content">content</label>
+            <textarea id="content" name="content" id="content" placeholder="Enter the content(use paragraphs)"></textarea>
+
+            <input type="file" name="image">
+            <button class="add-blog-button" type="submit">Add Blog</button>
+        </form>
+    </div>
+    <div></div>
+</div>
+<%- include("partials/footer") %>

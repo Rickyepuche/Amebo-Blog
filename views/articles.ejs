@@ -1,0 +1,48 @@
+<%- include("partials/header") %>
+<div class="articles-first-section">
+    <div class="articles-first-section-space-1"></div>
+    <div class="first-section-content">
+        <div class="first-section-content-space"></div>
+        <div class="first-section-content header">
+            <h1>All Articles</h1>
+        </div>
+        <div class="first-section-content-space"></div>
+    </div>
+    <div class="articles-first-section-space-2"></div>
+</div>
+<div class="articles-second-section">
+    <div class="articles-second-section-space-1"></div>
+    <div class="articles">
+        <%for( let i = blogPosts.length-1; i >= 0; i-- ) { %>
+        
+            <a class="particular-article"  href="/blog/<%=i %>">
+                <div class="paticular-article-container">
+                    <div class="article-image">
+                        <img src="<%=blogPosts[i].image %>" alt="blog-img">
+                    </div>
+                    <div class="article-timestamp">
+                        <div class="article-timestamp-p">
+                            <p><%=blogPosts[i].tag %></p>
+                        </div>
+                        <div class="article-timestamp-p">
+                            <p><%=blogPosts[i].uniqueId %></p>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-content-header">
+                            <h4><%=blogPosts[i].topic %></h4>
+                        </div>
+                        <div class="article-content-p">
+                            <p><%=blogPosts[i].description %></p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        <%} %>
+    </div>
+    <div class="articles-second-section-space-2"></div>
+</div>
+
+
+
+<%- include("partials/footer") %>

@@ -1,0 +1,77 @@
+<%- include("partials/header") %>
+<div class="blog-container">
+    <div class="blog-space-1"></div>
+    <div class="main-blog">
+        <div class="main-blog-top">
+            <div class="blog-top-space-1"></div>
+            <div class="main-blog-top-content">
+                <div class="main-blog-top-timestamp">
+                    <div><p><%=blogTag %></p></div>
+                    <div><p><%=blogUniqueId %></p></div>
+                </div>
+                <div class="main-blog-top-stuff">
+                    <div class="main-blog-top-topic">
+                        <h2><%=blogTopic %></h2>
+                    </div>
+                    <div class="main-blog-top-description">
+                        <h3><%=blogDescription %></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-top-space-2"></div>
+        </div>
+        <div class="main-blog-img">
+            <img src="<%=blogImage %>" alt="an-image">
+        </div>
+        <div class="main-blog-bottom">
+            <div class="main-blog-paragragh">
+                <p class="line-breaks"><%=blogContent%></p>
+            </div>
+        </div>
+
+    </div>
+    <div class="blog-space-2"></div>
+</div>
+<form action="/delete<%=id%>" method="post" enctype="multipart/form-data">
+    <button class="blogForm-button" type="submit">Delete</button>
+</form> 
+<div class="others-main">
+    <div class="others-space-1"></div>
+    <div class="others-content-main">
+        <div class="others-space-up">
+            <h3>More Articles</h3>
+        </div>
+        <a class="others-content-container"  href="/blog/<%=ID %>">
+            <div class="others-item-container">
+                <div class="others-item-image">
+                    <img src="<%=blogPosts[ID].image %>" alt="blog-img">
+                </div>
+                <div class="others-item-timestamp">
+                    <div class="others-time-stamp">
+                        <p><%=blogPosts[ID].tag %></p>
+                    </div>
+                    <div class="others-time-stamp">
+                        <p><%=blogPosts[ID].uniqueId %></p>
+                    </div>
+                </div>
+                <div class="others-item-content">
+                    <div class="others-content-header">
+                        <h4><%=blogPosts[ID].topic %></h4>
+                    </div>
+                    <div class="others-content-content">
+                        <p><%=blogPosts[ID].description %></p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="others-space-2"></div>
+</div>
+
+
+
+
+
+
+
+<%- include("partials/footer") %>

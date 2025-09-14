@@ -1,0 +1,50 @@
+[
+  {
+    "tag": "Lifestyle",
+    "uniqueId": "24 March, 2025",
+    "topic": "Healthy Morning Routines",
+    "description": "A quick guide to starting your day right.",
+    "content": "Waking up early and practicing mindfulness can change your life..",
+    "image": "/images/modern-decor.jpg"
+  },
+  {
+    "tag": "Technology",
+    "uniqueId": "23 May, 2024",
+    "topic": "AI in Web Development",
+    "description": "A short summary about how AI is changing web development.",
+    "content": "Artificial Intelligence is transforming how websites are built...",
+    "image": ""
+  },
+  {
+    "tag": "Lifestyle",
+    "uniqueId": "24 March, 2025",
+    "topic": "Healthy Morning Routines",
+    "description": "A quick guide to starting your day right.",
+    "content": "Waking up early and practicing mindfulness can change your life..",
+    "image": "/images/modern-furnishing.jpg"
+  },
+  {
+    "tag": "Lifestyle",
+    "uniqueId": "24 March, 2025",
+    "topic": "Healthy Morning Routines",
+    "description": "A quick guide to starting your day right.",
+    "content": "Waking up early and practicing mindfulness can change your life..",
+    "image": "/images/modern-decor.jpg"
+  },
+  {
+    "tag": "Technology",
+    "uniqueId": "23 May, 2024",
+    "topic": "AI in Web Development",
+    "description": "A short summary about how AI is changing web development.",
+    "content": "Artificial Intelligence is transforming how websites are built...",
+    "image": "/images/modern-entryway.jpg"
+  },
+  {
+    "tag": "Lifestyle",
+    "uniqueId": "24 March, 2025",
+    "topic": "Healthy Morning Routines",
+    "description": "A quick guide to starting your day right.",
+    "content": "Waking up early and practicing mindfulness can change your life..",
+    "image": "/images/modern-furnishing.jpg"
+  }
+]

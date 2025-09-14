@@ -1,0 +1,143 @@
+<%- include("partials/header") %>
+
+
+<div class="first-section-container">
+    <div class="first-section-container-space-1"></div>
+    <div class="first-section-content">
+        <div class="first-section-content-1"></div>
+        <div class="first-section-content-2">
+            <h1>Welcome to Amebo, we write about <br>technology, people and culture</h1>
+        </div>
+        <div class="first-section-content-3"></div>
+    </div>
+    <div class="first-section-container-space-2"></div>
+</div>
+<div class="second-section-container">
+    <div class="second-section-container-space-1"></div>
+    <div class="second-section-content">
+        <div class="second-section-content-space-upside"></div>
+        <div class="second-section-content-main">
+            <div class="second-section-content-main-1">
+                <div class="second-section-content-main-1-header">
+                    <h2>Featured</h2>
+                </div>
+                <div class="second-section-content-main-1-content">                     
+                <% for (let i = blogPosts.length - 1 ; i < blogPosts.length; i++) {%>
+                    <div class="second-section-content-main-1-upper">
+
+                        <div class="second-section-content-main-1-upper-image">
+                            <a href="/blog/<%=i %>">
+                                <img src="<%=blogPosts[i].image%>" alt="modern-decor">
+                            </a>
+                        </div>
+                        <div class="second-section-content-main-1-upper-time-stamp">
+                            <div class="upper-time-stamp">
+                                <p><%=blogPosts[i].tag%></p>
+                            </div>
+                            <div class="upper-time-stamp">
+                                <p><%=blogPosts[i].uniqueId%></p>
+                            </div>
+                        </div>
+                        
+
+                        <div class="second-section-content-main-1-upper-content">
+                            <div class="second-section-content-main-1-lower-content-topic">
+                                <a href="/blog/<%=i %>"><%=blogPosts[i].topic%></a>
+                            </div>
+                            <div class="second-section-content-main-1-lower-content-description">
+                                <p><%=blogPosts[i].description%></p>
+                            </div>
+                        </div>
+                    </div>
+                    <%} %>
+                <% for (let i = blogPosts.length - 2 ; i < blogPosts.length - 1; i++) {%>
+                    <div class="second-section-content-main-1-lower">
+                        <div class="second-section-content-main-1-lower-image">
+                            <a href="/blog/<%=i %>">
+                                <img src="<%=blogPosts[i].image%>" alt="modern-entryway">
+                            </a>
+                        </div>
+                        <div class="second-section-content-main-1-lower-time-stamp">
+                            <div class="lower-time-stamp">
+                                <p><%=blogPosts[i].tag%></p>
+                            </div>
+                            <div class="lower-time-stamp">
+                                <p><%=blogPosts[i].uniqueId%></p>
+                            </div>
+                        </div>
+                        <div class="second-section-content-main-1-lower-content">
+                            <div class="second-section-content-main-1-lower-content-topic">
+                                <a href="/blog/<%=i %>"><%=blogPosts[i].topic%></a>
+                            </div>
+                            <div class="second-section-content-main-1-lower-content-description">
+                                <p><%=blogPosts[i].description%></p>
+                            </div>
+                        </div>
+                    </div>
+                <%}%>
+                </div>
+                
+            </div>
+            <div class="second-section-content-main-2">
+                <div class="second-section-content-main-2-header">
+                    <h2>Recent</h2>
+                </div>
+                <div class="second-section-content-main-2-content">
+                    <!-- will put a for loop for looping through blog posts here later -->
+                <%for (let i = blogPosts.length - 3; i >= blogPosts.length - 8; i--) {%>
+                
+                    <a class="second-section-content-main-2-content-item"  href="/blog/<%=i %>">
+                        <div class="main-2-content-item-container">
+                            <div class="main-2-content-item-image">
+                                <img src="<%=blogPosts[i].image %>" alt="blog-img">
+                            </div>
+                            <div class="main-2-content-item-timestamp">
+                                <div class="main-2-time-stamp">
+                                    <p><%=blogPosts[i].tag %></p>
+                                </div>
+                                <div class="main-2-time-stamp">
+                                    <p><%=blogPosts[i].uniqueId %></p>
+                                </div>
+                            </div>
+                            <div class="main-2-content-item-content">
+                                <div class="main-2-content-item-content-header">
+                                    <h4><%=blogPosts[i].topic %></h4>
+                                </div>
+                                <div class="main-2-content-item-content-content">
+                                    <p><%=blogPosts[i].description %></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <%}%>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second-section-container-space-2"></div>
+</div>
+<div class="third-section-container">
+    <div class="third-section-container-space-1"></div>
+    <div class="third-section-content">
+        <div class="third-section-content-space-1"></div>
+        <div class="third-section-content-subscribe">
+            <div class="third-section-content-subscribe-head">
+                <h2>Get the best sent to your<br>inbox, every month</h2>
+            </div>
+            <div class="third-section-content-subscribe-form">
+                <form class="form" action="/subscribe" method="POST">      
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <button class="blogForm-button" type="submit">Subscribe</button>
+                </form>
+                <p>once monthly, no spam</p>
+            </div>
+        </div>
+        <div class="third-section-content-space-2"></div>   
+    </div>
+    <div class="third-section-container-space-2"></div>
+</div>
+
+
+<%- include("partials/footer") %>
